@@ -1,0 +1,46 @@
+* {
+    /*border: 1px solid black;*/
+    font-family: '微軟正黑體';
+}
+body{
+    height: 800px;
+    font-size: 16px;
+}
+.bg-orange{
+    background-color: #ef391a;
+}
+
+.sidebar {
+    position: fixed;
+    top: 54px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid #eee;
+    padding-left: 0;
+    padding-right: 0;
+}
+main {
+    padding: 2.2em 0;
+    padding-left: 30px;
+}
+main a{
+    color: #ef391a;
+}
+main h1{
+    margin: 0 0 1em;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 2em;
+}
+main h2{
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin: 45px 0 0.8em;
+    padding-bottom: 0.7em;
+    border-bottom: 1px solid #ddd;
+    z-index: -1;
+}
