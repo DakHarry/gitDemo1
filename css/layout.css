@@ -44,3 +44,43 @@ main h2{
     border-bottom: 1px solid #ddd;
     z-index: -1;
 }
+main h3{
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.2em;
+    z-index: -1;
+}
+main img{
+    width: 100%;
+}
+main p{
+    font-size: 1em;
+    padding: 12px 0px;
+    line-height: 30px;
+    text-align: justify;
+    font-family: '微軟正黑體';
+
+}
+main table{
+    border: 1px solid black;
+    font-size: 1em;
+    margin: 12px 0px;
+    font-family: '微軟正黑體';
+
+}
+main table thead tr th{
+    text-align: center;
+    border: 1px solid #ef391a;    
+    font-weight: 900;
+    color: white;
+    padding: 12px 0;
+    background-color: #ef391a;
+}
+main table tbody tr td{
+    border: 1px solid #ef391a;
+    line-height: 30px;    
+    padding: 5px;
+}
+main table tbody tr td:nth-child(1){
+    text-align: center;
+}

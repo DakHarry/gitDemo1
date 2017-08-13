@@ -18,17 +18,91 @@
         <div class="row">
             <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
                 <ul class="nav nav-pills flex-column">
-                    <li class="nav-item"><a href="" class="nav-link active">測試</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">測試</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">測試</a></li>
+                    <li class="nav-item"><a href="#Why-Git" class="nav-link active">為什麼要用Git?</a></li>
+                    <li class="nav-item"><a href="#How-Git" class="nav-link">運作模式</a></li>
+                    <li class="nav-item"><a href="#Learn-Git" class="nav-link">版本控制需學習的內容</a></li>
+                    <li class="nav-item"><a href="#Learn-Git" class="nav-link">
+                        <ol>
+                            <li>使用工具/軟體安裝</li>
+                            <li>本地端數據庫管理指令</li>
+                            <li>遠端數據庫管理指令</li>
+                            <li>多人開發管理指令</li>
+                            <li>Git 額外設定</li>
+                        </ol>
+                    </li>
                 </ul>
             </nav>
-            <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2">
+            <main class="col-sm-9 offset-sm-3 col-md-8 offset-md-2">
                 <h1>紀錄一切的過程，是減少恐慌的一步</h1>
                 <a href="#Why-Git">
-                    <h2 id="Why-Git">為什麼要用Git?</h2>
-                    <p>...</p>
+                    <h2 id="Why-Git">為什麼要用Git?</h2>                  
                 </a>
+
+                <p>
+                    以前在學校行政單位工讀的時候，當有一些文件要歸檔或是更新資訊，都會要求建一個新的檔案，並在命名上附註是幾年幾月幾日的版本，這樣的方式，我們從資料夾看下去能得知的資訊，只知道日期最新的版本，但並不會知道版本之間差異在哪。
+                    <br><br>
+                    在多人共同維護檔案的需求下，大家開始將檔案上傳到Google Drive等雲端平台，我們將版本更新的內容一樣按照日期的方式維護，但很容易發生同時更改檔案卻不知道要依哪個版本為主或是誤蓋過其他人的檔案。
+                    <br><br>
+                    而Git他會記錄一切，幫助你管理檔案，協助你解決多人共同編輯會遇到的衝突，和管理歷年的開發紀錄。
+                </p>
+                <a href="#How-Git">
+                    <h2 id="How-Git">運作模式</h2>                  
+                </a>
+                
+                <p>
+                    一開始我們必須先決定要記錄那些檔案，因此必須先選擇我們要記錄的資料夾存放位置，稱之為「工作目錄(Working directory)」，<br>
+                    指定工作目錄後，透過Git來記錄資料夾內容的變動紀錄，但是，如果任何情況變動發生，Git都會記錄，那把每分每秒的變動都存起來，
+                    當找尋某一個時間的記錄的時候，相對的就會列出一堆其實不需要紀錄的內容，又或是某些個人偏好的工具，是目錄非必要紀錄的內容，
+                    於是我們剛開始透過指令「git init」，指定我們的工作目錄要做git版控時，他就會產生「.git」的資料夾，這個內容就會記錄著所有
+                    變更的內容，為了可以清楚的知道，目錄的變更過程，當我們更改完資料後，可以把變更資料記錄到「本地數據庫(Local Repository)」，
+                    透過將資料儲存到數據庫，就像是上班打卡一樣，跟公司說明，幾點進公司，做了哪些任務，
+                    為了分辨我們工作目錄那些變更要上傳到數據庫做紀錄，中間會有一個上傳的媒介「索引(Staging area)」
+                    首先將要紀錄的檔案，透過指令「add」新增到索引(Staging area)，再透過指令「commit」，將記錄上傳到本地數據庫(Local Repository)，
+                    最後再透過指令「push」將本地數據庫的資料跟遠端數據庫(Remote repository)做同步，這樣就完成了簡單的版本控制了。
+                    
+                </p>
+                <img id="How__title-img" src="./images/git-operation.png" alt="運作模式">         
+                <table>
+                    <thead>
+                        <tr>
+                            <th>關鍵字</th>
+                            <th>解釋</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>工作目錄(Working Directory)</td>
+                            <td>要進行版本控制的專案目錄</td>
+                        </tr>
+                        <tr>
+                            <td>索引(Staging Area)</td>
+                            <td>透過索引可以將要進行版本控制的檔案新增到一個暫存區，以力跟不需要紀錄的檔案做區隔，並透過Commit的指令將檔案紀錄新增到本地數據庫。</td>
+                        </tr>
+                        <tr>
+                            <td>本地數據庫(Local Repository)</td>
+                            <td>本地進行的版本紀錄都會儲存在該電腦中，如果要與多人協同開發，會再透過push，將本地的版本數據與雲端的數據庫做同步。</td>
+                        </tr>
+                        <tr>
+                            <td>遠端數據庫(Remote Repository)</td>
+                            <td>協同開發為了保持所有團隊開發人員或者是後加入的開發者都能使用到最新的專案版本，可以透過遠端數據庫，下載至本地數據庫，進行分工開發。</td>
+                        </tr>                       
+                    </tbody>
+                </table>
+
+                 <a href="#Learn-Git">
+                    <h2 id="Learn-Git">版本控制需學習的內容</h2>                  
+                </a>
+                <p>
+                    初步的運作模式了解以後，接著就是要學會怎麼輕鬆的操作了!
+                </p>
+                <h3>學習目錄</h3>
+                <ul>
+                    <li>使用工具/軟體安裝</li>
+                    <li>本地端數據庫管理指令</li>
+                    <li>遠端數據庫管理指令</li>
+                    <li>多人開發管理指令</li>
+                    <li>Git 額外設定</li>
+                </ul>
             </main>
         </div>
     </div>
