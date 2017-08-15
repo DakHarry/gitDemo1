@@ -50,9 +50,7 @@ main h3{
     font-size: 1.2em;
     z-index: -1;
 }
-main img{
-    width: 100%;
-}
+
 main p{
     font-size: 1em;
     padding: 12px 0px;

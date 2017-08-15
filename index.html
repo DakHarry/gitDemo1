@@ -134,7 +134,7 @@
 
                 <h3 id="Learn-Tool">Local端基礎操作</h3>
                 <p>學習的指令概要</p>    
-                <section>
+                <section id="Learn-Local">
                     <ul>
                         <li>git init</li>
                         <li>git add .</li>
@@ -204,7 +204,94 @@
                         此外，還會標示作者是誰，修改的時間，及在commit時候註明的修改資訊，來達到基本的版本控制。
                     </p>
                 </section>
-                
+                <h3 id="Learn-Tool">遠端數據庫管理指令</h3>
+                <p>學習的指令概要</p>    
+                <section id="Learn-Local">
+                    <ul>
+                        <li>建立github 遠端數據庫空間</li>
+                        <li>git remote add 'name' 'url' </li>
+                        <li>git push</li>
+                        <li>git pull</li>
+                        <li>git fetch</li>
+                    </ul>
+                    <h3>建立github 遠端數據庫空間</h3>
+                    <p>
+                        到Github註冊帳號後，可以透過「New Repository」來建立遠端的數據庫，並用來管理專案的資料。
+                    </p>
+                    <img src="./images/github_new.PNG" alt="新增遠端數據庫">
+                    <p>
+                        「Repository name」命名遠端數據庫的名稱，下一步點選「Create repository」。
+                    </p>
+                    <p class="tips">※可以透過滑鼠拖曳資料夾到git Bash的畫面之中，可以自動貼上資料夾本身的路徑。</p>
+                    <img src="./images/github_readme.PNG" alt="readme">
+                    <p>
+                        建立後，會看到Github會給一些使用建議，他意思是我們可以選擇建立一個新的數據庫
+                        並連到上面的遠端數據庫路徑，在將專案上傳遠端數據庫。
+                        第二個方式是，直接連接遠端數據庫，並上傳既有的專案。
+                        並回到Git Bash的介面中，以第二個上傳既有的專案到遠端數據庫作示範。
+                    </p>
+                    <h3>git remote add 'name' 'url'</h3>
+                    <p>
+                        用來建立遠端數據庫的連接，name放遠端數據庫的預設名稱(origin)
+                        ，url放遠端數據庫的網址。
+                    </p>
+                    <img src="./images/cmd-remoteadd.PNG" alt="remote">
+
+                    <h3>git push '遠端數據庫名稱' '本地數據庫名稱'</h3>
+                    <p>
+                        將本地數據庫commit過的資料跟紀錄，更新到GitHub上遠端的數據庫，預設Bash如果沒有
+                        另外設定授權，GitHub會要求登入，下面會提到解決辦法。
+                    </p>
+                    <img src="./images/cmd-push.PNG" alt="push">
+                    <p>
+                        接著回到，GitHub剛建立的數據庫，並重新整理畫面
+                    </p>
+                    <img src="./images/github_push.PNG" alt="github-push">
+                    <p>
+                        電腦上的專案成功上傳到GitHub上，並且可以讓其他開發者下載下來(clone)作協同開發。
+                        並且可以在畫面上面看到幾個資訊，
+                        「1 commit」表示專案目前進行了一次版本控制，點進去可以看到詳細的版控紀錄時間跟內容。
+                        「1 branch」表示專案目前遠端數據庫有一條分支叫origin。
+                        「1 contributor」表示專案目前協同合作的人數。
+                        
+                    </p>
+                    <h3>git pull</h3>
+                    <p>
+                        當專案有兩個人以上作開發時，當分配的功能完成，通常會需要更新專案，
+                        以保持開發人員的程式版本保持最新的狀態，因此為了模擬當遠端數據庫有更新紀錄時，
+                        可以透過Git Bash指令的pull，來抓取更新的紀錄，並更新本地端的資料。
+                    </p>
+                    <img src="./images/github_create.PNG" alt="create">
+                    <p>
+                        點選Github頁面上「Create new file」，並新增一個「createbyother.html」，將檔案
+                        直接Commit至數據庫，來模擬其他開發整更新紀錄的情境，並回到Git Bash輸入「git pull」，
+                        將最新的版本記錄更新到專案裡。
+                    </p>
+                    <img src="./images/cmd-pull.PNG" alt="pull">
+                    <p>
+                        輸入後，可以藉由「git log」，會發現commit的紀錄更新成與遠端一樣有2筆記錄，並且專案資料夾
+                        也有在遠端建立的「createbyother.html」檔案，學到這邊，我們已經可以進行個人專案的版本控制。
+                    </p>
+                    <h3>git fetch</h3>
+                    <p>
+                        將遠端數據庫的紀錄，更新最新到本地數據庫的資料上，但不立即更新(merge)本地端專案的程式碼。
+                        這樣的好處是，如果當如果遠端的程式做了修改並且如果同時更改同一個檔案，更新下來之後，可以察覺
+                        是一段程式出了問題，確認完之後再透過「git merge」更新有衝突的檔案。
+                        <br>
+                        與「pull」的差別在於，pull隱藏了許多細節，「pull = fetch + merge」，一次性下載完數據庫並進行檔案的更新，
+                        但這樣的缺點在於如果同樣的檔案出現了變更，程式自動合併，我們比較不好控制結果是不是如我們預期。
+                    </p>
+                    <img src="./images/cmd-fetch.PNG" alt="fetch">
+                    <p>
+                        在從GitHub更新一次「createbyother.html」，在第二行新增字並commit完後，回到Git Bash輸入「git fetch」，
+                        他會更新數據庫的紀錄，但打開網頁會發現資料是沒有寫入程式碼的。
+                    </p>
+                    <img src="./images/cmd-merge.PNG" alt="merge">
+                    <p>
+                        接著輸入「git merge」，並重新整理一次網頁檔，會發現他將檔案更新到最新的狀態，透過分開的處理，我們可以很輕易的
+                        去處理開發上發生版本衝突的情況，這樣更容易掌握與控制專案的內容。
+                    </p>
+                </section>
                 
                 
             </main>
@@ -218,4 +305,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
-</html>
+</html，
