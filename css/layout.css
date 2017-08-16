@@ -58,7 +58,7 @@ main h4{
     color: #615c5c;
 }
 main img{
-    max-width: 100%;
+    max-width: 100%!important;
     margin-left: auto;
     margin-right: auto;
     display: inherit;
