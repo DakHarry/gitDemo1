@@ -1,6 +1,7 @@
 * {
     /*border: 1px solid black;*/
     font-family: '微軟正黑體';
+    color: #615c5c;
 }
 body{
     height: 800px;
@@ -50,14 +51,33 @@ main h3{
     font-size: 1.2em;
     z-index: -1;
 }
-
+main h4{
+    font-size: 1em;
+    margin: 5px 0;
+    font-weight: 600;
+    color: #615c5c;
+}
+main img{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inherit;
+    border: 1px solid #615c51;
+    box-sizing: border-box;
+}
 main p{
     font-size: 1em;
     padding: 12px 0px;
     line-height: 30px;
     text-align: justify;
     font-family: '微軟正黑體';
+    color: #615c5c;
 
+}
+main p.tips{
+    padding: 0;
+    line-height: 0;
+    color: #f74b4b;
 }
 main table{
     border: 1px solid black;
@@ -94,7 +114,7 @@ main table tbody tr td:nth-child(1){
 .tool-describe{
     text-align: center;
     font-size: 1em;
-    color: black;
+    color: #615c5c;
     line-height: 30px;
 }
 .col-sm-4-custom{
@@ -104,4 +124,12 @@ main table tbody tr td:nth-child(1){
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 32.333333%;
+}
+
+div.col-sm-4{
+    display: inline-block;
+}
+
+div.col-sm-4 img{
+    border: none;
 }
