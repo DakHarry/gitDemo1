@@ -32,6 +32,7 @@
                             <li><a href="#Learn-Authorize">GitHub設定SSH授權本機電腦</a></li>
                         </ol>
                     </li>
+                    <li class="nav-item"><a href="#Git-Model" class="nav-link">一個好的分支模型(Branch Model)</a></li>                    
                 </ul>
         </div>
     </nav>
@@ -52,6 +53,7 @@
                             <li><a href="#Learn-Authorize">GitHub設定SSH授權本機電腦</a></li>
                         </ol>
                     </li>
+                    <li class="nav-item"><a href="#Git-Model" class="nav-link">一個好的分支模型(Branch Model)</a></li>                    
                 </ul>
             </nav>
             <main class="col-sm-9 offset-sm-3 col-md-8 offset-md-2">
@@ -395,7 +397,29 @@
                         「New SSH key」，並將複製的金鑰貼到key，Title打自己能分辨是哪台電腦的授權就好。
                     </p>
                 </section>
+                <a href="#Git-Model">
+                    <h2 id="Git-Model">好的分支模型(Git Branch)</h2>                  
+                </a>
                 
+                <p>
+                    以作者Vincent Driessen解釋的Branch圖來解釋。                   
+                </p>
+                <img src="./images/git-branch-model.jpg" alt="build ssh">
+                <p class="quote">(圖片來源: http://nvie.com/posts/a-successful-git-branching-model/ )</p>    
+                <p>
+                    作者所分享的開發支線總共切成5條，包含master、hotfixes、release、develop和feature。<br>
+                    看起來很複雜，其實根本都是分支(branch)，就算只用一條分支，也可以做所謂的版控，但是可讀性就會有所差異。
+                </p>
+                <h3>以下介紹這幾種分支所代表的工作內容:</h3> 
+                <p>    
+                    「master主線」:只紀錄可以發佈的版本。<br>
+                    「develop開發線」:開發功能過程的主線，功能Bug修正或新增必須在此線與功能線之間完成紀錄。<br>
+                    「feature功能線」:專案開發各個功能的版本會紀錄此支線。<br>
+                    「release發佈線」:當功能開發完成，且Bug修正完成的功能版本，準備發佈到正式版本記錄在此線。<br>
+                    「hotfixes快修線」:在發布的專案中，常有些非預期性或重大Bug需要緊急修正，且有時間壓力時，
+                    為了解省時間修復功能的紀錄會放在這條線上，並更新版本給發佈線跟主線。<br>       
+                </p>
+                <h3>實作體驗開發過程</h3>
             </main>
         </div>
     </div>
@@ -407,4 +431,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
-</html，
+</html>

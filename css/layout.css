@@ -146,3 +146,8 @@ div.col-sm-4{
 div.col-sm-4 img{
     border: none;
 }
+.quote{
+    font-size: 0.8em;
+    color: #b7b7b7;
+    text-align: center;
+}
