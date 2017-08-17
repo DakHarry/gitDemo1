@@ -3,6 +3,7 @@
     font-family: '微軟正黑體';
     color: #615c5c;
 }
+
 body{
     height: 800px;
     font-size: 16px;
@@ -10,7 +11,12 @@ body{
 .bg-orange{
     background-color: #ef391a;
 }
-
+#CollapseNavbar ul li a {
+    color: white;
+}
+#CollapseNavbar ul li ol li {
+    color: white;
+}
 .sidebar {
     position: fixed;
     top: 54px;
@@ -108,8 +114,15 @@ main table tbody tr td:nth-child(1){
     margin-left: auto;
     margin-right: auto;
 }
+@media (min-width: 768px){
+    .tool-logo{
+        padding: 40px;
+        width: auto;
+    }
+}
 .tool-logo img{
     width: 100%;
+    width: auto;
 }
 .tool-describe{
     text-align: center;
