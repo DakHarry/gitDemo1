@@ -3,7 +3,19 @@
     font-family: '微軟正黑體';
     color: #615c5c;
 }
-
+a.color-font-white{
+    color: #fff;
+}
+a.link-position-right{
+    position: absolute;
+    right: 2em;
+    font-weight: 900;
+}
+i.icon-setting{
+    font-size: 24px;
+    color: #fff;
+    margin-right: 5px;
+}
 body{
     height: 800px;
     font-size: 16px;
@@ -12,10 +24,10 @@ body{
     background-color: #ef391a;
 }
 #CollapseNavbar ul li a {
-    color: white;
+    color: #fff;
 }
 #CollapseNavbar ul li ol li {
-    color: white;
+    color: #fff;
 }
 .sidebar {
     position: fixed;
@@ -97,7 +109,7 @@ main table thead tr th{
     text-align: center;
     border: 1px solid #ef391a;    
     font-weight: 900;
-    color: white;
+    color: #fff;
     padding: 12px 0;
     background-color: #ef391a;
 }
@@ -151,4 +163,15 @@ div.col-sm-4 img{
     font-size: 0.8em;
     color: #b7b7b7;
     text-align: center;
+}
+
+div#authtor-section{
+    color: #2c3e50;
+    position: absolute;
+    bottom: 12px;
+    padding: .5em 1em;
+    font-weight: 300;
+}
+#author{
+    color: #2c3e50;
 }

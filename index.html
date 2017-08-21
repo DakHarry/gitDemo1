@@ -9,11 +9,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav class="navbar bg-orange navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
 
-        <a href="#" class="navbar-brand "style="color:white;">Git 版本控制</a>
+        <a href="#" class="navbar-brand color-font-white"style="color:white;">Git 版本控制</a>
+        <a href="https://github.com/DakHarry/gitDemo1" target="_blank" class="color-font-white link-position-right hidden-xs-down"><i class="fa fa-github icon-setting" aria-hidden="true"></i>My GitHub</a>
         <button class="navbar-toggler navbar-toggler-right hidden-sm-up " type="button" data-toggle="collapse" data-target="#CollapseNavbar">
              &#9776; 
         </button>
@@ -55,6 +57,12 @@
                     </li>
                     <li class="nav-item"><a href="#Git-Model" class="nav-link">一個好的分支模型(Branch Model)</a></li>                    
                 </ul>
+                <div id="authtor-section">
+                    撰寫者:<br>
+                    <span id="author">詹逸宣(Harry Chan)</span>
+                    
+
+                </div>
             </nav>
             <main class="col-sm-9 offset-sm-3 col-md-8 offset-md-2">
                 <h1>紀錄過程，減少恐慌的一步</h1>
@@ -421,7 +429,7 @@
                     為了解省時間修復功能的紀錄會放在這條線上，並更新版本給發佈線跟主線。<br>       
                 </p>
                 <h3>實作體驗開發過程</h3>
-                <p>可以參考連結作者寫的流程練習<a href="http://yangzq007.com/2016/06/14/[%E8%BD%AC]%E4%B8%80%E4%B8%AA%E6%88%90%E5%8A%9F%E7%9A%84Git%E5%88%86%E6%94%AF%E6%A8%A1%E5%9E%8B/">]一个成功的Git分支模型</a>
+                <p>可以參考連結作者寫的流程練習<a href="http://yangzq007.com/2016/06/14/[%E8%BD%AC]%E4%B8%80%E4%B8%AA%E6%88%90%E5%8A%9F%E7%9A%84Git%E5%88%86%E6%94%AF%E6%A8%A1%E5%9E%8B/">一个成功的Git分支模型</a>
                     ，他的流程很明確的將各個branch的職責分開來處理。<br><br>
 
                     雖然有時候可能只是臨時修改某些檔案，但是為了方便，很容易讓版本控制變得好無章法，在多人共同維護上，沒有統一的版控規則，就更加容易造成版本控制上的混亂，因此，為了讓專案的開發過更明確，
